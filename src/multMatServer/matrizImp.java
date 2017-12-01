@@ -19,6 +19,13 @@ public class matrizImp extends UnicastRemoteObject implements matriz {
     private Double [][] mr;
     private int c;
     private int [] a;
+
+    /**
+     *
+     * @param n
+     * @param v
+     * @throws RemoteException
+     */
     public matrizImp(int n,Double[][] v) throws RemoteException
     {
         m=v;
@@ -29,6 +36,11 @@ public class matrizImp extends UnicastRemoteObject implements matriz {
         a[1]=0;
     }
 
+    /**
+     *
+     * @return
+     * @throws RemoteException
+     */
     @Override
     public Double[][] setMatrizC() throws RemoteException {
         
@@ -62,7 +74,11 @@ public class matrizImp extends UnicastRemoteObject implements matriz {
         
     }
 
-    
+    /**
+     *
+     * @param n
+     * @return
+     */
     public Double[] getColumna(int n) {
         Double [] a=new Double[c];
         for(int i=0;i<c;i++)
@@ -74,7 +90,11 @@ public class matrizImp extends UnicastRemoteObject implements matriz {
         
     }
 
-   
+    /**
+     *
+     * @param n
+     * @return
+     */
     public Double[] getFila(int n) {
         
 //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -86,20 +106,28 @@ public class matrizImp extends UnicastRemoteObject implements matriz {
         return a;
     }
 
- 
+    /**
+     *
+     * @return
+     */
     public int getXa() {
         return this.a[0];
         
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-   
+    /**
+     *
+     * @return
+     */
     public int getYa() {
         return this.a[1];
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    
+    /**
+     *
+     */
     public void printM() {
         for(int i=0;i<c;i++)
         {
@@ -109,7 +137,10 @@ public class matrizImp extends UnicastRemoteObject implements matriz {
         }
     }
 
-    
+    /**
+     *
+     * @return
+     */
     public int getC() {
         return c;
     }

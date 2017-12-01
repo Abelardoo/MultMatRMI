@@ -19,7 +19,11 @@ import java.util.logging.Logger;
  */
 public class matrizClient {
 
-     public static void main(String args[]){
+    /**
+     *
+     * @param args
+     */
+    public static void main(String args[]){
          		
          try {
              matriz m=(matriz) Naming.lookup("Matriz");
